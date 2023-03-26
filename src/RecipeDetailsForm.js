@@ -6,6 +6,7 @@ import PrepStepForm from './PrepStepForm.js';
 import RatingCard from './RatingCard.js';
 import RatingForm from './RatingForm.js';
 import Button from "react-bootstrap/Button";
+import "./index.css";
 
 function RecipeDetailsForm({ recipe: initialRecipe, notify }) {
 // was const  recipe, setRecipe
@@ -123,6 +124,7 @@ function RecipeDetailsForm({ recipe: initialRecipe, notify }) {
                 <Button className="btn btn-secondary" type="button" onClick={() => notify({ action: "exit-details-form" })}>Exit</Button>
             </div>
             </div>
+            
             {ingredients.length === 0 ? <div className="alert alert-warning">No Ingredients</div>
                 : (<div className="row row-cols-3">
                     {ingredients.map(x => <IngredientCard key={x.ingredientId} ingredient={x} subNotify={detailsFormNotify} />)}
@@ -155,6 +157,7 @@ function RecipeDetailsForm({ recipe: initialRecipe, notify }) {
                 : (<div className="row row-cols-3">
                     {ratings.map(x => <RatingCard key={x.ratingId} rating={x} subNotify={detailsFormNotify} />)}
                 </div>)}
+               
         </>
     );
 }

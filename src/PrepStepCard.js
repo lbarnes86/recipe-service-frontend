@@ -9,6 +9,7 @@ function PrepStepCard({ prepStep, subNotify }) {
     }
 
     return (
+        <div className="card-col">
         <div className="col">
             <div className="card">
                 <div className="card-body">
@@ -22,6 +23,7 @@ function PrepStepCard({ prepStep, subNotify }) {
                    </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

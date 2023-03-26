@@ -1,4 +1,5 @@
 import Button from "react-bootstrap/Button";
+import "./index.css";
 
 function RecipeCard({ recipe, notify }) {
 
@@ -9,6 +10,7 @@ function RecipeCard({ recipe, notify }) {
     }
 
     return (
+        <div className="card-col">
         <div className="col">
             <div className="card">
                 <div className="card-body">
@@ -27,6 +29,7 @@ function RecipeCard({ recipe, notify }) {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

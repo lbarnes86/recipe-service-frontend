@@ -9,6 +9,7 @@ function IngredientCard({ ingredient, subNotify }) {
     }
 
     return (
+        <div className="card-col">
         <div className="col">
             <div className="card">
                 <div className="card-body">
@@ -23,6 +24,7 @@ function IngredientCard({ ingredient, subNotify }) {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
